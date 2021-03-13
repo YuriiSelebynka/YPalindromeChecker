@@ -17,10 +17,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
 
         String sentence = new String();
-
 
             System.out.println("__________________________________");
             System.out.println("|           welcome to           |");
@@ -49,11 +47,11 @@ public class Main {
                 sentence = sentence.replaceAll("\\?", "");
                 sentence = sentence.replaceAll("\\!", "");
                 sentence = sentence.toLowerCase();
-            String template = "";
+                String template = "";
                 for (int i = 0; i < sentence.length(); i++) {
-                int index = sentence.length() - i - 1;
-                template += sentence.charAt(index);
-            }
+                    int index = sentence.length() - i - 1;
+                    template += sentence.charAt(index);
+                    }
 
                 if (/*!sentence.equals("q") && */sentence.equals(template)) {
                     System.out.println("|This sentence is palindrome.    |");
@@ -64,28 +62,28 @@ public class Main {
                     System.out.println("|________________________________|");
 
                     sentence = scanner.nextLine();
-            }
-                else if (/*!sentence.equals("q") && */!sentence.equals(template)) {
+                    }
+
+                else if (/*!sentence.equals("q") && */
+                        !sentence.equals(template)) {
                     System.out.println("|This sentence is not palindrome.|");
                     System.out.println("|________________________________|");
                     System.out.println("| Enter a sentence for checking: |");
                     System.out.println("|               or               |");
                     System.out.println("| Enter 'q' for exit.            |");
                     System.out.println("|________________________________|");
+                    }
+                }
 
-                   // sentence = scanner.nextLine();
-            }
+                else if (sentence.equals("q")) {
+                    System.out.println("|________________________________|");
+                    System.out.println("| Thank You for using my program |");
+                    System.out.println("|______________EXIT______________|");
+                    System.out.println("|  Copyright (c) Yurii Selebynka.|");
+                    System.out.println("|================================|");
+                    System.exit(1);
+                    }
+
+                } while (sentence != "q");
         }
-
-            else if (sentence.equals("q")) {
-                System.out.println("|________________________________|");
-                System.out.println("| Thank You for using my program |");
-                System.out.println("|______________EXIT______________|");
-                System.out.println("|  Copyright (c) Yurii Selebynka.|");
-                System.out.println("|================================|");
-                System.exit(1);
-            }
-
-            }while (sentence != "q");
-    }
 }
