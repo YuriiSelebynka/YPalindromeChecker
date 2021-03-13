@@ -37,8 +37,8 @@ public class Main {
             sentence = scanner.nextLine();
             if (!sentence.equals("q")) {
                 System.out.println("|________________________________|");
-                System.out.println("|Your sentence is:               |" + "\n" +
-                        "   " + sentence);
+                System.out.println("|Your sentence is:               |" +
+                        "\n" + "   " + sentence);
                 sentence = sentence.replaceAll("[^A-Za-zА-Яа-я]", "");
                 sentence = sentence.replaceAll("\\ ", "");
                 sentence = sentence.replaceAll("\\–", "");
